@@ -9,10 +9,15 @@ footer {
             display: inline-block;
             .fab {
                 color: $white;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 @include transition(all 0.5s);
                 &:hover {
                     @include transform(translateY(-3px));
+                }
+                &.fa-facebook-f {
+                    font-size: 1.4rem;
+                    position: relative;
+                    top: -4px;
                 }
             }
         }

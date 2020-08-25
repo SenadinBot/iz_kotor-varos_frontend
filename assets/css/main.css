@@ -970,7 +970,7 @@ footer {
       display: inline-block; }
       footer ul li .fab {
         color: #ffffff;
-        font-size: 2rem;
+        font-size: 1.7rem;
         -moz-transition: all 0.5s;
         -o-transition: all 0.5s;
         -webkit-transition: all 0.5s;
@@ -981,6 +981,10 @@ footer {
           -o-transform: translateY(-3px);
           -webkit-transform: translateY(-3px);
           transform: translateY(-3px); }
+        footer ul li .fab.fa-facebook-f {
+          font-size: 1.4rem;
+          position: relative;
+          top: -4px; }
   footer img {
     width: 400px;
     height: 100px; }
