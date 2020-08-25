@@ -1,0 +1,98 @@
+@mixin radius($value) {
+    -moz-border-radius: $value;
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}
+
+@mixin boxShadow($value) {
+    -moz-box-shadow: $value;
+    -webkit-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin transform($value) {
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+    -webkit-transform: $value;
+    transform: $value;
+}
+
+@mixin transition($value) {
+    -moz-transition: $value;
+    -o-transition: $value;
+    -webkit-transition: $value;
+    transition: $value;
+}
+
+@mixin mixedTransition($valueOne, $valueTwo) {
+    -moz-transition: $valueOne, $valueTwo;
+    -o-transition: $valueOne, $valueTwo;
+    -webkit-transition: $valueOne, $valueTwo;
+    transition: $valueOne, $valueTwo;
+}
+
+@mixin delay($value) {
+    -moz-transition-delay: $value;
+    -o-transition-delay: $value;
+    -webkit-transition-delay: $value;
+    transition-delay: $value;
+}
+
+@mixin shortTransition() {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@mixin centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@mixin nunitoLight() {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin nunitoRegular() {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin nunitoItalic() {
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@mixin nunitoSemiBold() {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin nunitoSemiBoldItalic() {
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+@mixin nunitoBold() {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin nunitoBoldItalic() {
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+}

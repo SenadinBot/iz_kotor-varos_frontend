@@ -1,0 +1,15 @@
+// Bootstrap
+@import url('/assets/css/bootstrap.min.css');
+// Font Awesome
+@import url('/assets/css/fontawesome.css');
+// Variables
+@import '_variables';
+// Helpers
+@import '_helpers';
+// Base
+@import '_base';
+// Aos
+@import url('/assets/css/aos.min.css');
+// Components
+@import 'components/_header';
+@import 'components/_footer';
