@@ -282,16 +282,17 @@ header {
                 &.header-clock {
                     top: -8px;
                     &:before {
-                        content: "";
-                        background-image: url("../../../assets/images/icons/header/clock.png");
-                        background-repeat: no-repeat;
-                        background-size: cover;
+                        font-family: 'Font Awesome 5 Free';
+                        content: "\f017";
+                        font-weight: 400;
+                        font-size: 1rem;
+                        color: $mainGreen;
                         display: inline-block;
                         width: 20px;
                         height: 20px;
-                        margin-right: 7px;
+                        margin-right: 5px;
                         position: relative;
-                        top: 6px;
+                        top: 2px;
                     }
                     span {
                         font-size: 11.9px;
@@ -306,11 +307,13 @@ header {
                 }
                 &.header-mail {
                     top: -14px;
+                    position: relative;
                     &:before {
-                        content: "";
-                        background-image: url("../../../assets/images/icons/header/mail.png");
-                        background-repeat: no-repeat;
-                        background-size: cover;
+                        font-family: 'Font Awesome 5 Free';
+                        content: "\f0e0";
+                        font-weight: 400;
+                        font-size: 1rem;
+                        color: $mainGreen;
                         display: inline-block;
                         width: 19px;
                         height: 15px;
@@ -328,12 +331,25 @@ header {
                         color: #566065;
                         top: 6px;
                         position: relative;
+                        @include transition(all .3s ease);
                         &:hover {
-                            text-decoration: none;
-                            background-image: linear-gradient(82deg, #ffc27a, #ff9c53);
-                            -webkit-background-clip: text;
-                            background-clip: text;
-                            -webkit-text-fill-color: transparent;
+                            color: $mainGreen;
+                            &:after {
+                                visibility: visible;
+                                @include transform(scaleX(1));
+                            }
+                        }
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            bottom: 0;
+                            left: 0;
+                            visibility: hidden;
+                            @include transform(scaleX(0));
+                            @include transition(all 0.3s ease-in-out 0s);
+                            background: $mainGreen;
                         }
                         &:focus {
                             text-decoration: none;
@@ -359,53 +375,35 @@ header {
                             margin-right: 0;
                         }
                         &:before {
-                            content: "";
-                            background-repeat: no-repeat;
-                            background-size: cover;
+                            font-family: 'Font Awesome 5 Brands';
+                            font-weight: 400;
+                            font-size: 1rem;
+                            color: #AEB3B6;
                             position: absolute;
                             top: 50%;
                             left: 50%;
-                            @include transform(translate(-50%,
-                            -50%));
+                            @include transform(translate(-50%, -50%));
                         }
                         &.fcb-icon {
                             &:before {
-                                background-image: url("../../../assets/images/icons/header/facebook.svg");
-                                width: 6.3px;
-                                height: 12.1px;
+                                content: "\f39e";
                             }
                         }
-                        &.twitter-icon {
+                        &.instagram-icon {
                             &:before {
-                                background-image: url("../../../assets/images/icons/header/twitter.svg");
-                                width: 11.6px;
-                                height: 9.3px;
+                                content: "\f16d";
                             }
                         }
-                        &.vimeo-icon {
+                        &.youtube-icon {
                             &:before {
-                                background-image: url("../../../assets/images/icons/header/vimeo.svg");
-                                width: 12px;
-                                height: 10.2px;
+                                content: "\f167";
                             }
                         }
                         &:hover {
                             background-color: #aeb3b6;
                             text-decoration: none;
-                            &.fcb-icon {
-                                &:before {
-                                    background-image: url("../../../assets/images/icons/header/facebook-active.svg");
-                                }
-                            }
-                            &.twitter-icon {
-                                &:before {
-                                    background-image: url("../../../assets/images/icons/header/twitter-active.svg");
-                                }
-                            }
-                            &.vimeo-icon {
-                                &:before {
-                                    background-image: url("../../../assets/images/icons/header/vimeo-active.svg");
-                                }
+                            &:before {
+                                color: $white;
                             }
                         }
                         &:focus {
@@ -504,11 +502,24 @@ header {
                 a {
                     position: relative;
                     padding: 0;
-                    // color: $doveGray;
-                    // @include openSansBold;
+                    color: $darkGray;
+                    @include nunitoBold;
                     font-size: 12.6px;
                     line-height: 12.6px;
                     text-transform: uppercase;
+                    @include transition(all .3s ease);
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        visibility: hidden;
+                        @include transform(scaleX(0));
+                        @include transition(all 0.3s ease-in-out 0s);
+                        background: $mainGreen;
+                    }
                     @include media-xs {
                         font-size: 19px;
                         letter-spacing: 0;
@@ -523,46 +534,49 @@ header {
                     }
                     &:hover {
                         text-decoration: none;
-                        background-image: linear-gradient(82deg, #ffc27a, #ff9c53);
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
+                        color: $mainGreen;
+                        &:after {
+                            visibility: visible;
+                            @include transform(scaleX(1));
+                        }
                     }
                     &:focus {
                         text-decoration: none;
                         outline: none;
-                        background-image: linear-gradient(82deg, #ffc27a, #ff9c53);
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
+                        color: $mainGreen;
+                        &:after {
+                            visibility: visible;
+                            @include transform(scaleX(1));
+                        }
                     }
                     &:active {
                         text-decoration: none;
                         outline: none;
-                    }
-                    &.active-link {
-                        background-image: linear-gradient(82deg, #ffc27a, #ff9c53);
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                    &.login-btn {
-                        color: $white;
-                        border-radius: 2.7px;
-                        background-image: radial-gradient(circle at 125% 0, #bfe8ff, #53c1ff);
-                        padding: 4.5px 6px;
-                        @include transition(all 0.5s);
-                        span {
-                            font-weight: 800;
+                        &:after {
+                            visibility: visible;
+                            @include transform(scaleX(1));
                         }
-                        &:hover,
-                        &:focus {
-                            -webkit-background-clip: initial;
-                            background-clip: text;
-                            -webkit-text-fill-color: $white;
-                            border-radius: 2.7px;
-                            background-image: radial-gradient(circle at 131% 0, #6fcbff, #1d9be3);
+                    }
+                }
+                &.active {
+                    a {
+                        color: $mainGreen;
+                        &:after {
+                            visibility: visible;
+                            @include transform(scaleX(1));
                         }
+                    }
+                }
+                &:nth-last-child(2) {
+                    padding: 0 20px 0 0;
+                }
+                .fa-search {
+                    color: $mainGreen;
+                    @include transition(all .3s ease);
+                    position: relative;
+                    top: 1px;
+                    &:hover {
+                        opacity: .7;
                     }
                 }
             }
@@ -625,10 +639,7 @@ header {
             border-radius: 100%;
             margin-right: 19.4px;
             position: relative;
-            @include boxShadow(0 10px 13px 0 rgba(0,
-            0,
-            0,
-            0.17));
+            @include boxShadow(0 10px 13px 0 rgba(0, 0, 0, 0.17));
             &:last-child {
                 margin-right: 0;
             }
@@ -639,8 +650,7 @@ header {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                @include transform(translate(-50%,
-                -50%));
+                @include transform(translate(-50%, -50%));
             }
             &.fcb-icon {
                 &:before {
