@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+    // Open Search
+    $('.header-search-toggle').click(function(e) {
+        e.preventDefault();
+        var $this = $(this),
+            $body = $('body');
+
+        $body.toggleClass('show-search overflow-hidden');
+    });
+
     // Back To Top animation
     var $backToTop = $(".back-to-top");
     $backToTop.hide();
@@ -35,9 +44,15 @@ $(document).ready(function() {
     // Menu
     $('.nav-icon-container').on('click', function() {
         $('body').addClass('menu-open');
+        $('li').removeClass('menu-expand');
     });
     $('.close-icon-container').on('click', function() {
         $('body').removeClass('menu-open');
+        $('li').removeClass('menu-expand');
+    });
+    $('.fa-arrow-right').on('click', function() {
+        $(this).parent('li').siblings().removeClass('menu-expand');
+        $(this).parent('li').toggleClass('menu-expand');
     });
 
     // // Cases animation

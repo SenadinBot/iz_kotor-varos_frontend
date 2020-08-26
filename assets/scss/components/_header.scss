@@ -1,7 +1,7 @@
 body {
     main {
         @include media-sm {
-            margin-top: 90px;
+            margin-top: 80px;
         }
         @include media-xs {
             margin-top: 78px;
@@ -33,10 +33,18 @@ body {
                 top: -10px;
                 @include transition(all 0.5s);
                 @include media-xs {
-                    top: 0;
+                    top: 14px;
                 }
                 @include media-sm {
-                    top: 0;
+                    top: 14px;
+                }
+            }
+            .menu-dropdown {
+                @include media-md {
+                    top: 50px;
+                }
+                @include media-lg {
+                    top: 50px;
                 }
             }
         }
@@ -117,7 +125,7 @@ header {
     z-index: 99;
     @include transition(all 0.5s);
     @include media-sm {
-        height: 90px;
+        height: 80px;
         position: fixed;
         top: 0;
         left: 0;
@@ -143,7 +151,7 @@ header {
         position: absolute;
         top: -4px;
         right: 0px;
-        background: #6D645D;
+        background: $darkGray;
         @include transition(all 0ms 300ms);
         @include transform(translateY(16px));
         &:before {
@@ -153,7 +161,7 @@ header {
             position: absolute;
             left: 0;
             bottom: 9px;
-            background: #6D645D;
+            background: $darkGray;
             @include mixedTransition(bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1));
         }
         &:after {
@@ -163,7 +171,7 @@ header {
             position: absolute;
             left: 0;
             top: 9px;
-            background: #6D645D;
+            background: $darkGray;
             @include mixedTransition(bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1));
         }
     }
@@ -177,18 +185,14 @@ header {
         left: 0;
         @include transition(all 0.5s);
         @include media-sm {
-            width: 60px;
-            height: 60px;
-            padding: 15.1px 16.1px;
-            top: 0;
-            left: 0;
+            top: 14px;
+            left: 5px;
+            height: auto;
         }
         @include media-xs {
-            width: 48.3px;
-            height: 48.3px;
-            padding: 15.1px 16.1px;
-            top: 0;
-            left: 0;
+            top: 14px;
+            left: 5px;
+            height: auto;
         }
         a {
             @include transition(all 0.5s);
@@ -222,17 +226,13 @@ header {
             height: 80px;
             @include transition(all 0.5s);
             position: relative;
-            top: 8px;
+            top: 12px;
             left: 8px;
             @include media-xs {
-                width: 48.3px;
-                height: 48.3px;
                 top: 0;
                 left: 0;
             }
             @include media-sm {
-                width: 60px;
-                height: 60px;
                 top: 0;
                 left: 0;
             }
@@ -240,7 +240,7 @@ header {
     }
     .top-nav-container {
         padding: 14px 0 12.2px 0;
-        background-color: #eef4f6;
+        background-color: $bgColor;
         @include transition(all 0.5s);
         @include media-sm {
             display: none;
@@ -295,13 +295,13 @@ header {
                         top: 2px;
                     }
                     span {
-                        font-size: 11.9px;
-                        line-height: 11.9px;
-                        // @include openSansBold;
+                        font-size: 0.875rem;
+                        line-height: 1;
+                        @include nunitoBold;
                         font-stretch: normal;
                         letter-spacing: normal;
                         text-align: center;
-                        color: #566065;
+                        color: $darkGray;
                         top: 6px;
                     }
                 }
@@ -322,13 +322,13 @@ header {
                         top: 8px;
                     }
                     a {
-                        font-size: 11.9px;
-                        line-height: 11.9px;
-                        // @include openSansBold;
+                        font-size: 0.875rem;
+                        line-height: 1;
+                        @include nunitoBold;
                         font-stretch: normal;
                         letter-spacing: normal;
                         text-align: center;
-                        color: #566065;
+                        color: $darkGray;
                         top: 6px;
                         position: relative;
                         @include transition(all .3s ease);
@@ -477,26 +477,41 @@ header {
                 position: relative;
                 @include media-xs {
                     width: 100%;
-                    text-align: center;
+                    text-align: left;
                     padding: 0;
-                    margin-bottom: 28px;
+                    border-bottom: 1px solid #F5F2F2;
                 }
                 @include media-md {
                     padding-right: 20px;
                 }
                 @include media-sm {
                     width: 100%;
-                    text-align: center;
+                    text-align: left;
                     padding: 0;
-                    margin-bottom: 28px;
+                    border-bottom: 1px solid #F5F2F2;
                 }
                 &:last-child {
                     padding-right: 0;
                     @include media-xs {
-                        margin-bottom: 0;
+                        text-align: center;
+                        border-bottom: none;
+                        margin-bottom: 28px;
                     }
                     @include media-sm {
-                        margin-bottom: 0;
+                        text-align: center;
+                        border-bottom: none;
+                        margin-bottom: 28px;
+                    }
+                }
+                &:nth-last-child(2) {
+                    padding: 0 20px 0 0;
+                    @include media-sm {
+                        padding: 0;
+                        margin-bottom: 28px;
+                    }
+                    @include media-xs {
+                        padding: 0;
+                        margin-bottom: 28px;
                     }
                 }
                 a {
@@ -519,22 +534,32 @@ header {
                         @include transform(scaleX(0));
                         @include transition(all 0.3s ease-in-out 0s);
                         background: $mainGreen;
+                        @include media-xs {
+                            display: none;
+                        }
+                        @include media-sm {
+                            display: none;
+                        }
                     }
                     @include media-xs {
                         font-size: 19px;
                         letter-spacing: 0;
                         line-height: 26px;
                         display: inline-block;
+                        padding: 25px 20px;
+                        width: 100%;
                     }
                     @include media-sm {
                         font-size: 19px;
                         letter-spacing: 0;
                         line-height: 26px;
                         display: inline-block;
+                        padding: 25px 20px;
+                        width: 100%;
                     }
                     &:hover {
                         text-decoration: none;
-                        color: $mainGreen;
+                        // color: $mainGreen;
                         &:after {
                             visibility: visible;
                             @include transform(scaleX(1));
@@ -543,7 +568,7 @@ header {
                     &:focus {
                         text-decoration: none;
                         outline: none;
-                        color: $mainGreen;
+                        // color: $mainGreen;
                         &:after {
                             visibility: visible;
                             @include transform(scaleX(1));
@@ -567,9 +592,6 @@ header {
                         }
                     }
                 }
-                &:nth-last-child(2) {
-                    padding: 0 20px 0 0;
-                }
                 .fa-search {
                     color: $mainGreen;
                     @include transition(all .3s ease);
@@ -578,6 +600,88 @@ header {
                     &:hover {
                         opacity: .7;
                     }
+                    @include media-sm {
+                        font-size: 1.5rem;
+                    }
+                    @include media-xs {
+                        font-size: 1.5rem;
+                    }
+                }
+                &:hover {
+                    .menu-dropdown {
+                        @include media-md {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        @include media-lg {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+                &.menu-expand {
+                    .fa-arrow-right {
+                        @include transform(rotate(90deg));
+                    }
+                    .menu-dropdown {
+                        opacity: 1;
+                        visibility: visible;
+                        position: relative;
+                    }
+                }
+            }
+            .fa-arrow-right {
+                display: none;
+                position: absolute;
+                right: 25px;
+                top: 27px;
+                width: auto;
+                height: auto;
+                color: $mainGreen;
+                @include transition(all .2s);
+                @include media-xs {
+                    display: block;
+                }
+                @include media-sm {
+                    display: block;
+                }
+            }
+        }
+        .menu-dropdown {
+            background-color: $bgColor;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            min-width: 13em;
+            text-align: left;
+            z-index: 60;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all 0.3s);
+            top: 100%;
+            padding: 15px 20px;
+            @include media-md {
+                top: 30px;
+            }
+            @include media-lg {
+                top: 30px;
+            }
+            a {
+                display: inline-block;
+                width: 100%;
+                text-transform: initial;
+                &:hover {
+                    color: $mainGreen;
+                }
+                &:after {
+                    display: none;
+                }
+                @include media-xs {
+                    padding: 15px 20px;
+                }
+                @include media-sm {
+                    padding: 15px 20px;
                 }
             }
         }
@@ -644,9 +748,10 @@ header {
                 margin-right: 0;
             }
             &:before {
-                content: "";
-                background-repeat: no-repeat;
-                background-size: cover;
+                font-family: 'Font Awesome 5 Brands';
+                font-weight: 400;
+                font-size: 1.5rem;
+                color: #AEB3B6;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -654,23 +759,17 @@ header {
             }
             &.fcb-icon {
                 &:before {
-                    background-image: url("../../../assets/images/icons/header/facebook.svg");
-                    width: 12.2px;
-                    height: 23.3px;
+                    content: "\f39e";
                 }
             }
-            &.twitter-icon {
+            &.instagram-icon {
                 &:before {
-                    background-image: url("../../../assets/images/icons/header/twitter.svg");
-                    width: 22.3px;
-                    height: 17.9px;
+                    content: "\f16d";
                 }
             }
-            &.vimeo-icon {
+            &.youtube-icon {
                 &:before {
-                    background-image: url("../../../assets/images/icons/header/vimeo.svg");
-                    width: 23px;
-                    height: 19.7px;
+                    content: "\f167";
                 }
             }
             a {
@@ -691,34 +790,36 @@ header {
     .header-clock {
         margin-top: 15px;
         &:before {
-            content: "";
-            background-image: url("../../../assets/images/icons/header/clock.png");
-            background-repeat: no-repeat;
-            background-size: cover;
+            font-family: 'Font Awesome 5 Free';
+            content: "\f017";
+            font-weight: 400;
+            font-size: 1rem;
+            color: $mainGreen;
             display: inline-block;
             width: 20px;
             height: 20px;
-            margin-right: 4px;
+            margin-right: 5px;
             position: relative;
-            top: 6px;
+            top: 2px;
         }
         span {
-            font-size: 11.9px;
-            line-height: 11.9px;
-            // @include openSansBold;
+            font-size: 0.875rem;
+            line-height: 1;
+            @include nunitoBold;
             font-stretch: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #566065;
+            color: $darkGray;
             top: 0;
         }
     }
     .header-mail {
         &:before {
-            content: "";
-            background-image: url("../../../assets/images/icons/header/mail.png");
-            background-repeat: no-repeat;
-            background-size: cover;
+            font-family: 'Font Awesome 5 Free';
+            content: "\f0e0";
+            font-weight: 400;
+            font-size: 1rem;
+            color: $mainGreen;
             display: inline-block;
             width: 19px;
             height: 15px;
@@ -727,21 +828,17 @@ header {
             top: 8px;
         }
         a {
-            font-size: 11.9px;
-            line-height: 11.9px;
-            // @include openSansBold;
+            font-size: 0.875rem;
+            line-height: 1;
+            @include nunitoBold;
             font-stretch: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #566065;
+            color: $darkGray;
             top: 6px;
             position: relative;
             &:hover {
                 text-decoration: none;
-                background-image: linear-gradient(82deg, #ffc27a, #ff9c53);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
             }
             &:focus {
                 text-decoration: none;
