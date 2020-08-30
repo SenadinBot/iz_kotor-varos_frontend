@@ -1,0 +1,50 @@
+.accordion {
+    .card-header {
+        background-color: $mainGray;
+        @include nunitoRegular();
+        cursor: pointer;
+        position: relative;
+        color: $darkGray;
+        @include transition(all .3s ease);
+        @include media-xs {
+            padding-right: 35px;
+        }
+        &:after {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 1rem;
+            color: $darkGray;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            content: "\f068";
+            @include transform(translateY(-50%));
+            @include transition(all .3s ease);
+        }
+        &:hover {
+            &:after {
+                content: "\f067"
+            }
+        }
+        &.collapsed {
+            &:after {
+                content: "\f067"
+            }
+            &:hover {
+                &:after {
+                    content: "\f068"
+                }
+            }
+        }
+    }
+    .card-body {
+        @include nunitoLight();
+        color: $darkGray;
+        ul {
+            li {
+                color: $darkGray;
+                @include nunitoLight();
+            }
+        }
+    }
+}

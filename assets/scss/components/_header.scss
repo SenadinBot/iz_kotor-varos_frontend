@@ -41,10 +41,10 @@ body {
             }
             .menu-dropdown {
                 @include media-md {
-                    top: 50px;
+                    top: 48px;
                 }
                 @include media-lg {
-                    top: 50px;
+                    top: 48px;
                 }
             }
         }
@@ -286,7 +286,7 @@ header {
                         content: "\f017";
                         font-weight: 400;
                         font-size: 1rem;
-                        color: $mainGreen;
+                        color: $darkGreen;
                         display: inline-block;
                         width: 20px;
                         height: 20px;
@@ -313,7 +313,7 @@ header {
                         content: "\f0e0";
                         font-weight: 400;
                         font-size: 1rem;
-                        color: $mainGreen;
+                        color: $darkGreen;
                         display: inline-block;
                         width: 19px;
                         height: 15px;
@@ -333,7 +333,7 @@ header {
                         position: relative;
                         @include transition(all .3s ease);
                         &:hover {
-                            color: $mainGreen;
+                            color: $darkGreen;
                             &:after {
                                 visibility: visible;
                                 @include transform(scaleX(1));
@@ -349,7 +349,7 @@ header {
                             visibility: hidden;
                             @include transform(scaleX(0));
                             @include transition(all 0.3s ease-in-out 0s);
-                            background: $mainGreen;
+                            background: $darkGreen;
                         }
                         &:focus {
                             text-decoration: none;
@@ -519,8 +519,8 @@ header {
                     padding: 0;
                     color: $darkGray;
                     @include nunitoBold;
-                    font-size: 12.6px;
-                    line-height: 12.6px;
+                    font-size: 0.875rem;
+                    line-height: 1;
                     text-transform: uppercase;
                     @include transition(all .3s ease);
                     &:after {
@@ -533,7 +533,7 @@ header {
                         visibility: hidden;
                         @include transform(scaleX(0));
                         @include transition(all 0.3s ease-in-out 0s);
-                        background: $mainGreen;
+                        background: $darkGreen;
                         @include media-xs {
                             display: none;
                         }
@@ -559,7 +559,7 @@ header {
                     }
                     &:hover {
                         text-decoration: none;
-                        // color: $mainGreen;
+                        // color: $darkGreen;
                         &:after {
                             visibility: visible;
                             @include transform(scaleX(1));
@@ -568,7 +568,7 @@ header {
                     &:focus {
                         text-decoration: none;
                         outline: none;
-                        // color: $mainGreen;
+                        // color: $darkGreen;
                         &:after {
                             visibility: visible;
                             @include transform(scaleX(1));
@@ -585,7 +585,7 @@ header {
                 }
                 &.active {
                     a {
-                        color: $mainGreen;
+                        color: $darkGreen;
                         &:after {
                             visibility: visible;
                             @include transform(scaleX(1));
@@ -593,7 +593,7 @@ header {
                     }
                 }
                 .fa-search {
-                    color: $mainGreen;
+                    color: $darkGreen;
                     @include transition(all .3s ease);
                     position: relative;
                     top: 1px;
@@ -637,7 +637,7 @@ header {
                 top: 27px;
                 width: auto;
                 height: auto;
-                color: $mainGreen;
+                color: $darkGreen;
                 @include transition(all .2s);
                 @include media-xs {
                     display: block;
@@ -662,17 +662,19 @@ header {
             top: 100%;
             padding: 15px 20px;
             @include media-md {
-                top: 30px;
+                top: 36px;
             }
             @include media-lg {
-                top: 30px;
+                top: 36px;
             }
             a {
                 display: inline-block;
                 width: 100%;
                 text-transform: initial;
+                @include nunitoRegular;
+                font-size: 1rem;
                 &:hover {
-                    color: $mainGreen;
+                    color: $darkGreen;
                 }
                 &:after {
                     display: none;
@@ -794,7 +796,7 @@ header {
             content: "\f017";
             font-weight: 400;
             font-size: 1rem;
-            color: $mainGreen;
+            color: $darkGreen;
             display: inline-block;
             width: 20px;
             height: 20px;
@@ -819,7 +821,7 @@ header {
             content: "\f0e0";
             font-weight: 400;
             font-size: 1rem;
-            color: $mainGreen;
+            color: $darkGreen;
             display: inline-block;
             width: 19px;
             height: 15px;

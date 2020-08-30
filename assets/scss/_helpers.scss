@@ -96,3 +96,22 @@
     font-style: italic;
     font-weight: 700;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
+@mixin robotoSlabRegular() {
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin robotoSlabSemiBold() {
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin robotoSlabBold() {
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}

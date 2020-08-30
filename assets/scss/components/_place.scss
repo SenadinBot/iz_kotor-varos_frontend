@@ -1,0 +1,147 @@
+.place-container {
+    .place-item {
+        display: block;
+        margin-bottom: 30px;
+        .img-container {
+            height: 300px;
+            position: relative;
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            overflow: hidden;
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                @include transition(.3s ease-in-out);
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 8px 8px 0px 0px;
+                background: #000000;
+                @include transition(opacity 0.5s cubic-bezier(0.35, 0.52, 0.2, 1));
+                opacity: 0;
+            }
+        }
+        &:hover {
+            .img-container {
+                &:after {
+                    opacity: .6;
+                }
+            }
+        }
+        .place-content {
+            background: $darkGreen;
+            border-top: 3px solid #ffffff;
+            padding: 12px 16px 14px 16px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            width: 100%;
+            position: relative;
+            z-index: 9;
+            // height: 90px;
+            overflow: hidden;
+            span {
+                color: $white;
+                display: block;
+                width: 100%;
+                color: #C2E8D5;
+                font-size: 0.875rem;
+                line-height: 1.3;
+                @include robotoSlabRegular();
+                &.name {
+                    color: $white;
+                    @include robotoSlabSemiBold();
+                }
+            }
+        }
+    }
+}
+
+.place-info-container {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        @include media-xs {
+            width: 100%;
+        }
+    }
+}
+
+.imam-container {
+    border-left: 1px solid $darkGray;
+    padding-left: 30px;
+    @include media-xs {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid $darkGray;
+        padding-top: 30px;
+        margin-top: 10px;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        @include media-xs {
+            width: 100%;
+        }
+    }
+}
+
+ul {
+    &.place-info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include media-xs {
+            text-align: center;
+        }
+        li {
+            color: $darkGray;
+            font-size: 1rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            @include robotoSlabBold();
+            span {
+                display: block;
+                width: 100%;
+                color: $darkGreen;
+                @include robotoSlabSemiBold();
+            }
+            a {
+                color: $darkGray;
+                position: relative;
+                font-size: 1rem;
+                line-height: 1.2;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    visibility: visible;
+                    @include transform(scaleX(1));
+                    @include transition(all 0.3s ease-in-out 0s);
+                    background: $darkGray;
+                }
+                &:hover {
+                    &:after {
+                        visibility: hidden;
+                        @include transform(scaleX(0));
+                    }
+                }
+            }
+        }
+    }
+}
