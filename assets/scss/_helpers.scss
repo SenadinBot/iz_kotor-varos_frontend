@@ -53,6 +53,13 @@
     @include transform(translate(-50%, -50%));
 }
 
+@mixin linearGradient($valueOne, $valueTwo, $valueThree) {
+    background: -moz-linear-gradient($valueOne, $valueTwo, $valueThree);
+    background: -webkit-linear-gradient($valueOne, $valueTwo, $valueThree);
+    background: -o-linear-gradient($valueOne, $valueTwo, $valueThree);
+    background: -ms-linear-gradient($valueOne, $valueTwo, $valueThree);
+}
+
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @mixin nunitoLight() {

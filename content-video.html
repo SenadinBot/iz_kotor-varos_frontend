@@ -57,51 +57,49 @@
                             </div>
                         </div>
                         <ul>
-                            <li>
+                            <li class="active">
                                 <a href="#">Pocetna</a>
                             </li>
                             <li>
-                                <a href="#">Medzlis</a>
+                                <a href="/medzlis.html">Medzlis</a>
+                                <i class="fas fa-arrow-right"></i>
+                                <div class="menu-dropdown">
+                                    <a href="/struktura.html" class="menu-item">Struktura</a>
+                                    <a href="#" class="menu-item">Lorem Ipsum</a>
+                                </div>
                             </li>
                             <li>
                                 <a href="/vijesti.html">Vijesti</a>
                                 <i class="fas fa-arrow-right"></i>
                                 <div class="menu-dropdown">
-                                    <a href="#" class="menu-item">Item One</a>
-                                    <a href="#" class="menu-item">Item Two</a>
-                                    <a href="#" class="menu-item">Item Three</a>
-                                    <a href="#" class="menu-item">Item Four</a>
+                                    <a href="/vijesti-medzlis.html" class="menu-item">Vijesti iz Medzlisa</a>
+                                    <a href="/vijesti-dzemat.html" class="menu-item">Vijesti iz Dzemata</a>
                                 </div>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="/dzemati.html">Dzemati</a>
                                 <i class="fas fa-arrow-right"></i>
                                 <div class="menu-dropdown">
-                                    <a href="/donji-varos.html" class="menu-item">Donji Varos</a
-                    >
-                    <a href="#" class="menu-item">Item Two</a>
-                                    <a href="#" class="menu-item">Item Three</a>
-                                    <a href="#" class="menu-item">Item Four</a>
+                                    <a href="/donji-varos.html" class="menu-item">Donji Varos</a>
+                                    <a href="#" class="menu-item">Item Two</a>
                                 </div>
                             </li>
                             <li>
-                                <a href="#">Edukacija</a>
+                                <a href="/edukacija.html">Edukacija</a>
                                 <i class="fas fa-arrow-right"></i>
                                 <div class="menu-dropdown">
-                                    <a href="#" class="menu-item">Item One</a>
-                                    <a href="#" class="menu-item">Item Two</a>
-                                    <a href="#" class="menu-item">Item Three</a>
-                                    <a href="#" class="menu-item">Item Four</a>
+                                    <a href="/hutbe.html" class="menu-item">Hutbe</a>
+                                    <a href="/tekstovi.html" class="menu-item">Tekstovi</a>
+                                    <a href="/video.html" class="menu-item">Video</a>
                                 </div>
                             </li>
                             <li>
-                                <a href="#">Usluge</a>
+                                <a href="/usluge.html">Usluge</a>
                                 <i class="fas fa-arrow-right"></i>
                                 <div class="menu-dropdown">
-                                    <a href="#" class="menu-item">Item One</a>
-                                    <a href="#" class="menu-item">Item Two</a>
+                                    <a href="/vjencanja.html" class="menu-item">Vjencanje</a>
+                                    <a href="/pitanja.html" class="menu-item">Pitanja</a>
                                     <a href="#" class="menu-item">Item Three</a>
-                                    <a href="#" class="menu-item">Item Four</a>
                                 </div>
                             </li>
                             <li>
@@ -134,7 +132,7 @@
                     <div class="col-12">
                         <i class="far fa-times-circle header-search-toggle"></i>
                         <form method="get" action="/search" class="form-inline position-relative clearfix">
-                            <input class="form-control search-position w-100 h-100" type="search" placeholder="Unesite ...." aria-label="Search" id="query" name="query" value="" />
+                            <input class="form-control search-position w-100 h-100" type="search" placeholder="Unesite ...." aria-label="Search" id="query" name="query" value="">
                             <i class="fas fa-search"></i>
                         </form>
                     </div>
@@ -174,8 +172,52 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-4 col-lg-3 d-none d-sm-block">
-                        <h4>Posljedne objave</h4>
+                    <div class="col-12 col-sm-4 col-lg-3">
+                        <h4 class="mb-4">Posljedne objave</h4>
+                        <a href="" class="news-item d-block">
+                            <div class="img-container">
+                                <img src="./assets/images/2.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="news-content">
+                                <span class="d-block"><i class="fas fa-calendar-alt"></i>28.08.2020</span>
+                                <h5 class="mb-2">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                </h5>
+                            </div>
+                        </a>
+                        <a href="" class="news-item d-block">
+                            <div class="img-container">
+                                <img src="./assets/images/2.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="news-content">
+                                <span class="d-block"><i class="fas fa-calendar-alt"></i>28.08.2020</span>
+                                <h5 class="mb-2">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                </h5>
+                            </div>
+                        </a>
+                        <a href="" class="news-item d-block">
+                            <div class="img-container">
+                                <img src="./assets/images/2.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="news-content">
+                                <span class="d-block"><i class="fas fa-calendar-alt"></i>28.08.2020</span>
+                                <h5 class="mb-2">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                </h5>
+                            </div>
+                        </a>
+                        <a href="" class="news-item d-block">
+                            <div class="img-container">
+                                <img src="./assets/images/2.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="news-content">
+                                <span class="d-block"><i class="fas fa-calendar-alt"></i>28.08.2020</span>
+                                <h5 class="mb-2">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                </h5>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -207,58 +249,25 @@
                         </li>
                     </ul>
                     <span>© Copyright 2020, Sva prava zadržana.
-              <a
-                href="https://www.linkedin.com/in/senadin-botic-8b30a167/"
-                target="_blank"
-                >Created by S.B.</a
-              ></span
-            >
-          </div>
+                        <a href="https://www.linkedin.com/in/senadin-botic-8b30a167/"
+                           target="_blank">Created by S.B.</a></span>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-    <script
-      type="text/javascript"
-      src="assets/scripts/jquery-3.3.1.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/bootstrap.min.js"
-    ></script>
+    <script type="text/javascript" src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/scripts/aos.min.js"></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/jarallax-element.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/jarallax-video.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/jarallax.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/jquery.filterizr.min.js"
-    ></script>
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?libraries=places&key="
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/lightgallery.js"
-    ></script>
+    <script type="text/javascript" src="assets/scripts/jarallax-element.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/jarallax-video.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/jarallax.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery.filterizr.min.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key="></script>
+    <script type="text/javascript" src="assets/scripts/lightgallery.js"></script>
     <script type="text/javascript" src="assets/scripts/lg-video.js"></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/lg-fullscreen.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/scripts/lg-thumbnail.js"
-    ></script>
+    <script type="text/javascript" src="assets/scripts/lg-fullscreen.js"></script>
+    <script type="text/javascript" src="assets/scripts/lg-thumbnail.js"></script>
     <script type="text/javascript" src="assets/scripts/main.js?v=1"></script>
-  </body>
+</body>
+
 </html>

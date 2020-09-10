@@ -27,6 +27,12 @@ $bgColor: #eef4f6;
     }
 }
 
+@mixin media-sm-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 // Small Devices, Tablet portrait .visible-sm-* 
 @mixin media-sm {
     @media (min-width: 768px) and (max-width: 991px) {

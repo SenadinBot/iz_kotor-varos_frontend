@@ -1,0 +1,146 @@
+.home-video {
+  .video-item {
+    width: calc(100% / 3 - 6px);
+    display: inline-block;
+    position: relative;
+    height: auto;
+
+    @include media-lg {
+      height: 220px;
+    }
+
+    @include media-xs-portrait {
+      width: 100%;
+    }
+
+    &:first-child {
+      margin-right: 3px;
+
+      @include media-xs-portrait {
+        margin-right: 0;
+      }
+
+      &:before {
+        @include linearGradient(45deg, #4db2ec 0%, #4a8f5e 100%);
+      }
+    }
+
+    &:nth-child(2) {
+      margin-right: 3px;
+
+      @include media-xs-portrait {
+        margin-right: 0;
+      }
+
+      &:before {
+        @include linearGradient(45deg, #d17646 0%, #c63939 100%);
+      }
+    }
+
+    &:last-child {
+      &:before {
+        @include linearGradient(135deg, #d760b7 0%, #3b78b4 100%);
+      }
+    }
+
+    &:before {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      opacity: 0.3;
+      @include boxShadow(inset 0 0 50px 0 rgba(0, 0, 0, 0.5));
+    }
+
+    .img-container {
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: cover;
+        @include transition(all .3s);
+      }
+    }
+
+    .video-content {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      z-index: 9;
+
+      h5 {
+        color: $white;
+        padding-right: 50px;
+        text-transform: initial;
+
+        @include media-sm {
+          padding-right: 20px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        @include media-xs-landscape {
+          padding-right: 20px;
+          font-size: .875rem;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+      }
+
+      span {
+        &.type {
+          color: $white;
+          padding: 3px 7px;
+          background-color: rgba(0, 0, 0, 0.4);
+          letter-spacing: 0.8px;
+          font-size: 0.75rem;
+          margin-bottom: 10px;
+          display: inline-block;
+          @include nunitoBold();
+        }
+
+        &.d-block {
+          font-size: 0.75rem;
+          color: $white;
+          margin-bottom: 10px;
+          @include nunitoRegular();
+    
+          i {
+            font-size: 0.75rem;
+            position: relative;
+            top: -1px;
+            margin-right: 7px;
+          }
+        }
+  
+      }
+
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      z-index: 9;
+      width: 40px;
+    }
+
+    &:hover {
+      .img-container {
+        img {
+          @include transform(scale3d(1.1, 1.1, 1));
+        }
+      }
+    }
+
+  }
+}

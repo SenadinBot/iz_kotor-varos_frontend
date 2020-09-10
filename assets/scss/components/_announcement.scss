@@ -1,0 +1,37 @@
+.announcement {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $mainGray;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  a {
+    font-size: 1rem;
+    color: $darkGray;
+    font-weight: bold;
+
+    @include transition(all .3s);
+    &:hover {
+      color: $darkGreen;
+    }
+  }
+  span {
+    font-size: 0.75rem;
+    color: $darkGray;
+    margin-bottom: 5px;
+    @include nunitoRegular();
+  
+    i {
+      font-size: 0.65rem;
+      position: relative;
+      top: -1px;
+      margin-right: 7px;
+    }
+  }
+}
